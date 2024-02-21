@@ -1,15 +1,20 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import connectDb from './src/config/db.js';
+import {connectDb} from './src/config/db.js';
+import listofCryptoCurrencies from './src/routes/listOfCryptocurrenciesRoute.js';
+import getListOfCompany from './src/routes/listOfCompaniesroute.js';
+import bodyParser from 'body-parser';
 dotenv.config();
-
-
-
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
+connectDb();
+app.use('/list' ,listofCryptoCurrencies);
+app.use('/company' ,getListOfCompany);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000!');

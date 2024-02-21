@@ -10,3 +10,5 @@ const CryptocurrencySchema = new mongoose.Schema({
   const Cryptocurrency = mongoose.model('Cryptocurrency', CryptocurrencySchema);
 
   export default Cryptocurrency;
+
+  
