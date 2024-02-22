@@ -20,5 +20,5 @@ process : Just clone the project go inside the Koinx assignment folder then run 
 
   # Api Request Response 
 
-  It will contain the Requesr Api's and Body of api and response from the api
+  It will contain the Request Api's and Body of api and response from the api
 
