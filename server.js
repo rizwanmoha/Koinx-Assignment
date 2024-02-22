@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import {connectDb} from './src/config/db.js';
 import listofCryptoCurrencies from './src/routes/listOfCryptocurrenciesRoute.js';
 import getListOfCompany from './src/routes/listOfCompaniesroute.js';
+import CurrencyExchnage from './src/routes/CurrencyExchangeRoute.js';
 import bodyParser from 'body-parser';
 dotenv.config();
 const app = express();
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 connectDb();
 app.use('/list' ,listofCryptoCurrencies);
 app.use('/company' ,getListOfCompany);
+app.use('/exchange' ,CurrencyExchnage);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000!');
