@@ -1,9 +1,9 @@
-import express from 'express';
+import express from "express";
+
+import { getListOfCompany } from "../controller/listOfCompanyController.js";
 
 const router = express.Router();
 
-import {getListOfCompany} from '../controller/listOfCompanyController.js';
-
-router.post('/task3' , getListOfCompany);
+router.post("/task3", getListOfCompany);
 
 export default router;

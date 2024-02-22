@@ -1,9 +1,9 @@
-import express from 'express';
+import express from "express";
+
+import { getTheCyptoCurrency } from "../controller/CryptoController.js";
 
 const router = express.Router();
 
-import {getTheCyptoCurrency} from '../controller/CryptoController.js';
-
-router.post('/task1' , getTheCyptoCurrency);
+router.post("/task1", getTheCyptoCurrency);
 
 export default router;

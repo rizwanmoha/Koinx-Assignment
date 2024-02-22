@@ -1,8 +1,7 @@
-import Joi from 'joi';
+import Joi from "joi";
 
 const companyValidationSchema = Joi.object({
-    currency : Joi.string().required(),
-})
+  currency: Joi.string().required(),
+});
 
-
-export {companyValidationSchema};
+export { companyValidationSchema };

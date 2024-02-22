@@ -1,9 +1,9 @@
-import express from 'express';
+import express from "express";
+
+import { currencyExchange } from "../controller/CurrencyExchangeController.js";
 
 const router = express.Router();
 
-import {currencyExchange} from '../controller/CurrencyExchangeController.js';
-
-router.post('/task2' , currencyExchange);
+router.post("/task2", currencyExchange);
 
 export default router;
